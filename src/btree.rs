@@ -29,4 +29,8 @@ where
 		let key = (self.derivation)(&val);
 		self.mapping.insert(key, val);
 	}
+
+    pub fn remove(&'a mut self, key: &'a K) -> Option<V> {
+        self.mapping.remove(key)
+    }
 }
